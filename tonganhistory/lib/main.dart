@@ -144,22 +144,22 @@ class _ContentState extends State<ContentCards>
       elevation: 3.0,
       child: Stack(
         children: <Widget>[
-          //Image.asset('assets/images/tongan.jpg'),
+         // Image.asset('assets/images/tongan.jpg'),
 
-          //   Positioned.fill(
-          //     child: FlareActor(
-          //       'assets/animations/'+this.menuImage+'.flr',
-          //       alignment: Alignment.center,
-          //       fit: BoxFit.contain,
-          //       animation: 'Untitled',
-          //     ),
-          //  ),
+            Positioned.fill(
+              child: FlareActor(
+                'assets/animations/'+this.menuImage+'.flr',
+                alignment: Alignment.center,
+                fit: BoxFit.contain,
+                animation: 'Untitled',
+              ),
+           ),
 
           Positioned.fill(
             child: Container(
               height: 300,
               width: 300,
-              color: Colors.white30,
+              color: Colors.white60,
             ),
           ),
 
@@ -376,9 +376,10 @@ class _MyHomePageState extends State<MyHomePage> {
     twentyFirst.animationImages.add('NewsMedia');
     twentyFirst.animationImages.add('FeletiSevele');
     twentyFirst.animationImages.add('TonganRiot2006');
+    twentyFirst.animationImages.add('TonganRiot2006');
     twentyFirst.s.add("2002 Election");
     twentyFirst.s.add("2005 Election");
-    twentyFirst.s.add("2006 Roits");
+    twentyFirst.s.add("2006 Riots");
     twentyFirst.s.add("2008 Election");
     twentyFirst.s.add("Democratisation and\n2010 Elections");
     twentyFirst.show = true;
