@@ -376,6 +376,7 @@ class _MyHomePageState extends State<MyHomePage> {
     twentyFirst.animationImages.add('NewsMedia');
     twentyFirst.animationImages.add('FeletiSevele');
     twentyFirst.animationImages.add('TonganRiot2006');
+    twentyFirst.animationImages.add('TonganRiot2006');
     twentyFirst.animationImages.add('AkilisiPohiva');
     twentyFirst.s.add("2002 Election");
     twentyFirst.s.add("2005 Election");
