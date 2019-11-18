@@ -144,16 +144,16 @@ class _ContentState extends State<ContentCards>
       elevation: 3.0,
       child: Stack(
         children: <Widget>[
-         // Image.asset('assets/images/tongan.jpg'),
+          // Image.asset('assets/images/tongan.jpg'),
 
-            Positioned.fill(
-              child: FlareActor(
-                'assets/animations/'+this.menuImage+'.flr',
-                alignment: Alignment.center,
-                fit: BoxFit.contain,
-                animation: 'Untitled',
-              ),
-           ),
+          Positioned.fill(
+            child: FlareActor(
+              'assets/animations/' + this.menuImage + '.flr',
+              alignment: Alignment.center,
+              fit: BoxFit.contain,
+              animation: 'Untitled',
+            ),
+          ),
 
           Positioned.fill(
             child: Container(
@@ -507,9 +507,75 @@ class _MyHomePageState extends State<MyHomePage> {
                       twenthCentry,
                       twentyFirst,
                       Container(
-                        height: 10,
+                        height: 300,
+                        decoration: BoxDecoration(
+                          
                         color: Colors.red,
-                      )
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(50.0),
+                            topRight: Radius.circular(50.0),
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            SizedBox(
+                              height: 80,
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 45,
+                                ),
+                                Icon(
+                                  Icons.share,
+                                  color: Colors.white,
+                                  size: 25,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "Share",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25),
+                                ),
+                                
+                              ],
+                            ),
+                             SizedBox(
+                              height: 30,
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 45,
+                                ),
+                                Icon(
+                                  Icons.info,
+                                  color: Colors.white,
+                                  size: 25,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "About",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25),
+                                ),
+                                
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
