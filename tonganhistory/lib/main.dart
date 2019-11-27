@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flare_flutter/flare_actor.dart';
-import 'package:share/share.dart';
+//import 'package:share/share.dart';
 
 import 'about.dart';
 
