@@ -3,6 +3,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flare_flutter/flare_actor.dart';
+import 'package:share/share.dart';
+
+import 'about.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Tongan History App',
       theme: ThemeData(
           primarySwatch: Colors.red,
           textTheme: Theme.of(context).textTheme.apply(
@@ -376,12 +379,12 @@ class _MyHomePageState extends State<MyHomePage> {
     twentyFirst.animationImages.add('NewsMedia');
     twentyFirst.animationImages.add('FeletiSevele');
     twentyFirst.animationImages.add('TonganRiot2006');
-    twentyFirst.animationImages.add('TonganRiot2006');
+    //twentyFirst.animationImages.add('TonganRiot2006');
     twentyFirst.animationImages.add('AkilisiPohiva');
     twentyFirst.s.add("2002 Election");
     twentyFirst.s.add("2005 Election");
     twentyFirst.s.add("2006 Riots");
-    twentyFirst.s.add("2008 Election");
+    //twentyFirst.s.add("2008 Election");
     twentyFirst.s.add("Democratisation and\n2010 Elections");
     twentyFirst.show = true;
     //twentyFirst.number = 6;
@@ -429,6 +432,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         animation: animationName,
                       ),
                     ),
+                    
                     title: Text(
                       "Kingdom Of Tonga",
                       style: TextStyle(
@@ -447,7 +451,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 30,
                       padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                       child: Text(
-                        "Important People of Tonga",
+                        "Inspirational People of Tonga",
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'OpenSans',
@@ -509,8 +513,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Container(
                         height: 300,
                         decoration: BoxDecoration(
-                          
-                        color: Colors.red,
+                          color: Colors.red,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(50.0),
                             topRight: Radius.circular(50.0),
@@ -522,57 +525,73 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               height: 80,
                             ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 45,
-                                ),
-                                Icon(
-                                  Icons.share,
-                                  color: Colors.white,
-                                  size: 25,
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  "Share",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 25),
-                                ),
-                                
-                              ],
+                            InkWell(
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 45,
+                                  ),
+                                  Icon(
+                                    Icons.share,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    "Share",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 25),
+                                  ),
+                                ],
+                              ),
+                              onTap: () {
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //       builder: (context) => share(),
+                                //     ));
+                              },
                             ),
-                             SizedBox(
+                            SizedBox(
                               height: 30,
                             ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 45,
-                                ),
-                                Icon(
-                                  Icons.info,
-                                  color: Colors.white,
-                                  size: 25,
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  "About",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 25),
-                                ),
-                                
-                              ],
-                            )
+                            InkWell(
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 45,
+                                  ),
+                                  Icon(
+                                    Icons.info,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    "About",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 25),
+                                  ),
+                                ],
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => About(),
+                                    ));
+                              },
+                            ),
                           ],
                         ),
                       ),
@@ -585,7 +604,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+
+
   }
+
+
+
 }
 
 class PreContact extends StatefulWidget {
@@ -777,6 +801,9 @@ class ImportantPeopleContent extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          SizedBox(
+            height: 8,
           ),
           Text(
             this.name,
